@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html>
+	<head charset = "UTF-8" name = "viewport" content = "width=device-width, height=device-height, user-scalable=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+			html > * {
+				font-family: Roboto, Arial, FreeSans, Helevetica, sans-serif;
+				color: white;
+				box-sizing: border-box;
+			}
+			div {
+				border: 0;
+				padding: 0;
+				margin: 0;
+			}
+			button {
+				font-family: Roboto, Arial, FreeSans, Helevetica, sans-serif;
+				font-size: 13px;
+				font-weight: 600;
+				color: white;
+				background-color: inherit;
+				
+				padding: 5px 5px;
+				margin: 2.5px;
+				border: 2px solid mediumblue;
+				border-radius: 5px;
+				outline: 0;
+				
+				transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+			}
+			a:link {
+				color: dodgerblue;
+				text-decoration: none;
+			}
+			button:hover {
+				background-color: navy;
+				transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
+			}
+			button:active {
+				background-color: mediumblue;
+				transition-duration: 0s;
+			}
+			
+			.card {
+				padding: 0px 15px;
+			}
+			
+			.gridbox {
+				display: grid;
+				width: 100%;
+				height: 100%;
+				
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				
+				grid-template-rows: 35px auto 35px;
+				grid-template-columns: 15vw auto 15vw;
+				grid-template-areas:
+					'top top top'
+					'left main right'
+					'left down right';
+			}
+			.chatbox {
+				width: 100%; 
+				height: 30px; 
+				color: white; 
+				background-color: #444; 
+				border: 0;
+			}
+			.hflexbox {
+				display: flex;
+				justify-content: space-between;
+				align-content: flex-between;
+				align-items: center;
+			}
+			.hflex-left   {width: 270px; height: inherit; display: grid; justify-content: flex-start; align-content: flex-between; align-items: center; order: 0;}
+			.hflex-center {width: auto;  height: inherit; display: grid; justify-content: center;     align-content: flex-between; align-items: center; order: 1;}
+			.hflex-right  {width: 270px; height: inherit; display: grid; justify-content: flex-end;   align-content: flex-between; align-items: center; order: 2;}
+			
+			#header		{background-color: navy; grid-area: top;}
+			#sidebar	{overflow-y: scroll; scrollbar-width: thin; background-color: #282828; grid-area: left;}
+			#content	{overflow-y: scroll; scrollbar-width: thin;  background-color: #181818; grid-area: main;}
+			#list		{overflow-y: scroll; scrollbar-width: thin;  background-color: #282828; grid-area: right;}
+			#footer		{display: flex; font-size: 12px; justify-content: flex-end; align-items: center; background-color: #202020; grid-area: down;}
+			
+			::-webkit-scrollbar {
+				width: 10px;
+				background-color: #0002;
+			}
+			
+			.mobile-only {
+				display: none;
+			}
+			
+			@media screen and (max-width: 1640px) {
+				.gridbox {
+					grid-template-columns: 250px auto 250px;
+				}
+			}
+			@media screen and (max-width: 1080px) {
+				.gridbox {
+					grid-template-columns: 250px auto 0;
+				}
+				
+				#list {
+					display: none;
+					width: 0px;
+				}
+			}
+			@media screen and (max-width: 720px) {
+				.gridbox {
+					grid-template-columns: 0 auto 0;
+				}
+				.hflex-right {
+					display: none;
+				}
+				
+				.mobile-only {
+					display: inline;
+				}
+				
+				#sidebar {
+					display: none;
+					width: 0px;
+				}
+			}
+		</style>
+		<body>
+	</head>
+		<div class = 'gridbox'>
+			<div id = 'header' class = 'card hflexbox'>	
+				<h3 class = 'hflex-left'>The MPIC Spec</h3>
+				<h3 class = 'hflex-right'>Home</h3>
+			</div>
+			
+			<div id = 'sidebar' class = 'card'>
+				<h3>Code Input</h3>
+					<a href = 'https://www.example.com'><button>Bare Bones</button></a>
+					<button>Hello World</button>
+					<button>Input/Output</button>
+					<button>Conditions</button>
+					<button>Loops</button>
+					<button>Functions</button>
+				<h3>Code Meta</h3>
+					<button>Macros</button>
+					<button>Prefixes</button>
+					<button>Operations</button>
+					<button>Declaration</button>
+					<button>Definition</button>
+					<button>(De)Referencing</button>
+				<h3>Compiler Input</h3>
+					<button>Usage</button>
+					<button>Files</button>
+				<h3>Compiler Meta</h3>
+					<button>Program Flow</button>
+					<button>Compiler Functions</button>
+					<button>ASM Output</button>
+				<h3>Standard Library</h3>
+					<button>ios</button>
+					<button>iof</button>
+					<button>gui</button>
+					<button>math</button>
+					<button>stat</button>
+					<button>algo</button>
+				<br>
+				<br>
+				
+			</div>
+			<div id = 'content' class = 'card'>
+				
+				<p class = 'mobile-only' style = 'color: red'><br><b>
+				WARNING: The sidebar is the only method of navigation for this site. Please open links from this webpage in a new tab, or view the website in a horizontal orientation.
+				</b></p>
+				
+				<h1>Welcome.</h1>
+				<p>This is a webpage dedicated to providing specifications related to the MPIC project. You can find my current progress on the project at <a href = 'https://www.github.com/chris03-dev/mpic-x64'>Github</a>.</p>
+				<p>Here you'll find definitions and inner workings of MPI code, the MPI compiler, and the standard library. Click one of the links on the sidebar or just below this text to get started.</p>
+				<h3>Code Basics</h3>
+				<ul>
+					<li><a>Hello World</a></li>
+					<li><a>Input/Output</a></li>
+					<li><a>Conditions</a></li>
+					<li><a>Loops</a></li>
+					<li><a>Functions</a></li>
+				</ul>
+				<h3>Code Meta</h3>
+				<ul>
+					<li><a>Macros</a></li>
+					<li><a>Prefixes</a></li>
+					<li><a>Operations</a></li>
+					<li><a>Declaration</a></li>
+					<li><a>Definition</a></li>
+					<li><a>(De)referencing</a></li>
+				</ul>
+				
+				<h3>Standard Library</h3>
+				<ul>
+					<li><a>ios</a></li>
+					<li><a>iof</a></li>
+					<li><a>gui</a></li>
+					<li><a>math</a></li>
+					<li><a>stat</a></li>
+					<li><a>algo</a></li>
+				</ul>
+				
+			</div>
+			<div id = 'list' class = 'card'>
+				<h3>Page Contents</h3>
+					<button>X64 (Microsoft)</button>
+					<button>X64 (System-V)</button>
+					<button>ARM (v8)</button>
+					<button>RISC-V (RV64)</button>
+			</div>
+			<div id = 'footer' class = 'card'>Copyright © chris03-dev, 2020.</div>
+		</div>
+	</body>
+</html>
