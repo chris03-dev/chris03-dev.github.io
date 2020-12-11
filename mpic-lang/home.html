@@ -5,7 +5,6 @@
 		<style>
 			html > * {
 				font-family: Roboto, Arial, FreeSans, Helevetica, sans-serif;
-				color: white;
 				box-sizing: border-box;
 			}
 			div {
@@ -17,7 +16,6 @@
 				font-family: Roboto, Arial, FreeSans, Helevetica, sans-serif;
 				font-size: 13px;
 				font-weight: 600;
-				color: white;
 				background-color: inherit;
 				
 				padding: 5px 5px;
@@ -81,9 +79,9 @@
 			.hflex-right  {width: 270px; height: inherit; display: grid; justify-content: flex-end;   align-content: flex-between; align-items: center; order: 2;}
 			
 			#header		{background-color: navy; grid-area: top;}
-			#sidebar	{overflow-y: scroll; scrollbar-width: thin; background-color: #282828; grid-area: left;}
-			#content	{overflow-y: scroll; scrollbar-width: thin;  background-color: #181818; grid-area: main;}
-			#list		{overflow-y: scroll; scrollbar-width: thin;  background-color: #282828; grid-area: right;}
+			#sidebar	{overflow-y: scroll; scrollbar-width: thin; grid-area: left;}
+			#content	{overflow-y: scroll; scrollbar-width: thin; grid-area: main;}
+			#list		{overflow-y: scroll; scrollbar-width: thin; grid-area: right;}
 			#footer		{display: flex; font-size: 12px; justify-content: flex-end; align-items: center; background-color: #202020; grid-area: down;}
 			
 			::-webkit-scrollbar {
@@ -127,6 +125,26 @@
 					width: 0px;
 				}
 			}
+			@media (prefers-color-scheme: dark) { 
+				html > * {color: white;}
+				#sidebar {background-color: #282828;}
+				#content {background-color: #181818;}
+				#list    {background-color: #282828;}
+				#footer  {background-color: #202020;}
+				button      {color: white; border: 2px solid mediumblue;}
+			}
+			@media (prefers-color-scheme: light) { 
+				html > * {color: black;}
+				#header  {color: white;}
+				#sidebar {background-color: #E0E0E0;}
+				#content {background-color: #F0F0F0;}
+				#list    {background-color: #E0E0E0;}
+				#footer  {background-color: #E8E8E8;}
+				button         {color: black; border: 2px solid blue;}
+				button:hover   {color: white; background-color: blue;}
+				button:active  {color: white; background-color: mediumblue;}
+			}
+			
 		</style>
 		<body>
 	</head>
@@ -180,7 +198,7 @@
 				<p>Here you'll find definitions and inner workings of MPI code, the MPI compiler, and the standard library. Click one of the links on the sidebar or just below this text to get started.</p>
 				<h3>Code Basics</h3>
 				<ul>
-					<li><a>Hello World</a></li>
+					<li><a href = 'https://chris03-dev.github.io/mpic-lang'>Hello World</a></li>
 					<li><a>Input/Output</a></li>
 					<li><a>Conditions</a></li>
 					<li><a>Loops</a></li>
