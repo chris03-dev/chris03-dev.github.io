@@ -144,7 +144,8 @@ img {
 	#header       {background-color: #101010;}
 	#sidebar      {background-color: #202020;}
 	#content      {background-color: #181818;}
-	#list         {background-color: #202020;}
+	#list         {background-color: #101010;}
+	#list > .card {background-color: #202020;}
 	#footer       {background-color: #1C1C1C;}
 	#footer > a   {color: white;}
 	
