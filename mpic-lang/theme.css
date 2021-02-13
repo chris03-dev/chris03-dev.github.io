@@ -22,9 +22,11 @@ button {
 	border-radius: 5px;
 	outline: 0;
 	
+	cursor: pointer;
 	transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
-button:hover {transition: all 0.25s cubic-bezier(0.4, 0.0, 0.2, 1);}
+
+button:hover {transition: all 0.2s cubic-bezier(0.4, 0.0, 0.2, 1);}
 button:active {transition-duration: 0s;}
 
 a:link {
@@ -51,7 +53,7 @@ img {
 	right: 0;
 	bottom: 0;
 	
-	grid-template-columns: 15vw auto 25vw;
+	grid-template-columns: 250px auto 25vw;
 	grid-template-rows: 40px auto 40px;
 	
 	grid-template-areas:
@@ -79,12 +81,27 @@ img {
 .hflex-center {width: auto;  height: inherit; display: grid; justify-content: center;     align-content: flex-between; align-items: center; order: 1;}
 .hflex-right  {width: 200px; height: inherit; display: grid; justify-content: flex-end;   align-content: flex-between; align-items: center; order: 2;}
 
-#header		{z-index: 4; grid-area: top;   border-bottom: 3.5px solid mediumblue;}
+#header		{z-index: 4; grid-area: top;   border-bottom: 2.5px solid mediumblue;}
 #sidebar	{z-index: 3; grid-area: left;  overflow-y: scroll; scrollbar-width: none;}
 #content	{z-index: 1; grid-area: main;  overflow-y: scroll; scrollbar-width: thin; padding: 1vw 2.5vw;}
 #list		{z-index: 0; grid-area: right; overflow-y: scroll; scrollbar-width: none; padding: 20px;}
-#list > *   {max-width: 300px; margin: 0px 0px 10px 0px;}
 #footer		{z-index: 2; grid-area: down;  font-size: 12px;}
+
+#list > *   {max-width: 300px; margin: 0px 0px 10px 0px;}
+#sidebar > p {
+	font-weight: 500;
+	margin: 10px 0px 5px 0px;
+}
+#sidebar > button {
+	font-size: 15px;
+	font-weight: 400;
+	width: 100%;
+	text-align: left;
+	
+	margin: 0;
+	padding: 10px;
+	border: 0;
+}
 
 ::-webkit-scrollbar {width: 0px;}
 
