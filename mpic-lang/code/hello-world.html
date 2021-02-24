@@ -3,93 +3,95 @@
 	<title>MPIC Home</title>
 	<head>
 		<meta name = 'viewport' charset = 'UTF-8' content = 'width=device-width, initial-scale=1.0, width=device-width, height=device-height'>
-		<link rel = 'stylesheet' type = 'text/css' href = 'https://chris03-dev.github.io/mpic-lang/theme-min.css'>
+		<link rel = 'stylesheet' type = 'text/css' href = 'theme-dbg.css'>
 	</head>
 	<body>
 		<div class = 'gridbox'>
 			<div id = 'header' class = 'card hflexbox'>	
-				<h3 class = 'hflex-left'>The MPIC Specification</h3>
+				<h3>The MPIC Documentation</h3>
 			</div>
 			<div id = 'sidebar' class = 'card'>
 				<p>Configuration</p>
-					<button>Build</button>
-					<button>Setup</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/conf/build.html'><button>Build</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/conf/setup.html'><button>Setup</button></a>
 				<hr>
 				<p>Compiler Input</p>
-					<button>Usage</button>
-					<button>Files</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/comp/usage.html'><button>Usage</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/comp/files.html'><button>Files</button></a>
 				<hr>
-				<p>Code Input</p>
-					<button>Hello World</button>
-					<button>Input/Output</button>
-					<button>Operations</button>
-					<button>Conditionals</button>
-					<button>Program Flow</button>
-					<button>Functions</button>
+				<p>Code Features</p>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/hello-world.html'><button>Hello World</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/input-output.html'><button>Input/Output</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/operations.html'><button>Operations</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/conditions.html'><button>Conditionals</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/progflow.html'><button>Program Flow</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/functions.html'><button>Functions</button></a>
 				<hr>
 				<p>Code Advanced</p>
-					<button>Arguments</button>
-					<button>Macros</button>
-					<button>References</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/arguments.html'><button>Arguments</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/pointers.html'><button>Pointers</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code/macros.html'><button>Macros</button></a>
 				<hr>
 				<p>Compiler Meta</p>
-					<button>Code Flow</button>
-					<button>Functions</button>
-					<button>ASM Output</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/comp-m/codeflow.html'><button>Code Flow</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/comp-m/functions.html'><button>Functions</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/comp-m/assembly.html'><button>Assembly</button></a>
 				<hr>
 				<p>Code Meta</P>
-					<button>Arguments</button>
-					<button>Operations</button>
-					<button>Declaration</button>
-					<button>Definition</button>
-					<button>References</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code-m/arguments.html'><button>Arguments</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code-m/operations.html'><button>Operations</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code-m/declaration.html'><button>Declaration</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code-m/definition.html'><button>Definition</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/code-m/pointers.html'><button>Pointers</button></a>
 				<hr>
 				<p>Standard Library</p>
-					<button>ios</button>
-					<button>iof</button>
-					<button>gui</button>
-					<button>math</button>
-					<button>stat</button>
-					<button>algo</button>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/ios.html'><button>ios</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/iof.html'><button>iof</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/gui.html'><button>gui</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/ios.html'><button>math</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/algo.html'><button>algo</button></a>
+					<a href = 'https://chris03-dev.github.io/mpic-lang/stl/stat.html'><button>stat</button></a>
 				<br><br>
 			</div>
 			<div id = 'content' class = 'card'>
 				<p class = 'mobile-only' style = 'color: red'><br><b>
-				This webpage is the only method of navigation on this website on mobile. Please keep this webpage open in your browser, if you wish to properly navigate the specifications.
+				This webpage is the only method of navigation on this website on mobile. Please keep this webpage open in your browser, if you wish to properly navigate the documentation.
 				</b></p>
 				
 				<h1>Welcome.</h1>
-				<p>This is a webpage dedicated to the MPIC project. You can find my current progress on the project at <a href = 'https://www.github.com/chris03-dev/mpic-x64'>Github</a>.</p>
-				<p>Here you'll find definitions and inner workings of MPI code, the MPI compiler, and the standard library. You'll need to learn the C language, and Assembly (FASM syntax) to understand the 'meta' parts of the specification. Click one of the links on the sidebar or just below this text to get started.</p>
+				<p>This is a documentation webpage dedicated to the MPIC project. You can find my current progress on the project at <a href = 'https://www.github.com/chris03-dev/mpic-x64'>Github</a>.</p>
+				<p>Here you'll find definitions and inner workings of MPI code, the MPI compiler, and the standard library. Basic knowledge of the C99 language, and FASM Assembly Language is needed to understand the compiler code and the assembly output of MPI files. Click one of the links on the sidebar (if viewing on desktop/tablet) or just below this text to get started.</p>
+				<hr>
 				
 				<h3>Configuration</h3>
-				<p>Literally the first thing you should do when using my project.</p>
+				<p>Literally the first thing you should do after downloading the MPI compiler and libraries. Don't make your life unnecessarily complicated when using tools in the MPI project.</p>
 				<ul>
 					<li><a>Build</a></li>
 					<li><a>Setup</a></li>
 				</ul>
 				<h3>Compiler Input</h3>
-				<p>If you need help on running the MPI program, then this is the right place for you.</p>
+				<p>Understanding the compiler's behavior allows you to utilize as much of the compiler features later on. If you need help on learning all the compiler flags, or simply compiling code, then this is the right place for you.</p>
+				<p>Do note that you could simply type the command <code>mpic -h</code> or <code>mpic --help</code> in the bash shell or command line if you already have the compiler installed.</p>
 				<ul>
 					<li><a>Usage</a></li>
 					<li><a>Files</a></li>
 				</ul>
 				<h3>Code Basics</h3>
-				<p>Here, you'll find some help with learning to code.</p>
+				<p>Here, you'll find some help with MPI code.</p>
 				<ul>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/hello-world.html'>Hello World</a></li>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/input-output.html'>Input/Output</a></li>
-					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/input-output.html'>Operations</a></li>
+					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/operations.html'>Operations</a></li>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/conditions.html'>Conditions</a></li>
-					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/loops.html'>Loops</a></li>
+					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/progflow.html'>Program Flow</a></li>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/functions.html'>Functions</a></li>
 				</ul>
 				<h3>Code Advanced</h3>
 				<p>More advanced stuff for code.</p>
 				<ul>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/arguments.html'>Arguments</a></li>
+					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/pointers.html'>Pointers</a></li>
 					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/macros.html'>Macros</a></li>
-					<li><a href = 'https://chris03-dev.github.io/mpic-lang/code/references.html'>References</a></li>
 				</ul>
 				<h3>Code Meta</h3>
 				<p>There, you'll understand the assembly interpretation of the code.</p>
@@ -98,7 +100,7 @@
 					<li><a>Operations</a></li>
 					<li><a>Declaration</a></li>
 					<li><a>Definition</a></li>
-					<li><a>References</a></li>
+					<li><a>Pointers</a></li>
 				</ul>
 				<h3 id = 'lel'>Compiler Meta</h3>
 				<ul>
@@ -112,8 +114,8 @@
 					<li><a>iof</a></li>
 					<li><a>gui</a></li>
 					<li><a>math</a></li>
-					<li><a>stat</a></li>
 					<li><a>algo</a></li>
+					<li><a>stat</a></li>
 				</ul>
 			</div>
 			<div id = 'list' class = 'card'>
@@ -131,12 +133,10 @@
 				</div>
 			</div>
 			<div id = 'footer' class = 'card hflexbox'>
-				<div><h3>COMPILER META<a class = 'desktop-only'> / FUNCTIONS</a></h3></div>
+				<button class = 'mobile-only'>❮ Program Flow</button>
+				<div><h3>CODE ADVANCED<a class = 'desktop-only'> / POINTERS</a></h3></div>
 				<a href = 'https://www.github.com/chris03-dev/chris03-dev.github.io/LICENSE.md' class = 'desktop-only' style = 'margin: 0;'>Copyright © chris03-dev, 2020-2021</a>
-				<div class = 'mobile-only'>
-					<button>❮ ASM Output</button>
-					<button class = 'footer-button'>Functions ❯</button>
-				</div>
+					<button class = 'mobile-only'>Arguments ❯</button>
 			</div>
 		</div>
 	</body>
