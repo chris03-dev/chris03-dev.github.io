@@ -13,3 +13,4 @@ These projects, however, won't be documented properly until I believe they are u
 # Note to self
 
 `debug/` is for personal debug purposes only. No files there should be associated with this repository.
+Also, use PAT instead of password when pushing the repository.
