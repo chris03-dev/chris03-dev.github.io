@@ -12,5 +12,5 @@ These projects, however, won't be documented properly until I believe they are u
 
 # Note to self
 
-`debug/` is for personal debug purposes only. No files there should be associated with this repository.
+`_debug/` is for personal debug purposes only. No files must show up in the website.
 Also, use PAT instead of password when pushing the repository.
